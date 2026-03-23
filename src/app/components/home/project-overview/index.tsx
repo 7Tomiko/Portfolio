@@ -9,7 +9,7 @@ const ProjectOverview = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('/api/page-data')
+                const res = await fetch('/portfolio/api/page-data')
                 if (!res.ok) throw new Error('Failed to fetch')
                 const data = await res.json()
                 setProjectData(data?.projectOverview)

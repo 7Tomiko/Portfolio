@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const experienceData = [
     {
-        icon: "/images/icon/asana-icon.svg",
+        icon: "/portfolio/images/icon/asana-icon.svg",
         role: "Développeur Application, LoyalTeam",
         location: "Luxembourg, Luxembourg",
         startYear: "5 janvier 2026",
@@ -14,7 +14,7 @@ const experienceData = [
         ]
     },
     {
-        icon: "/images/icon/tailwind-icon.svg",
+        icon: "/portfolio/images/icon/tailwind-icon.svg",
         role: "Développeur Web, Coeur à Pattes",
         location: "Le Havre, France",
         startYear: "2025",
@@ -26,7 +26,7 @@ const experienceData = [
         ]
     },
     {
-        icon: "/images/icon/trillium-icon.svg",
+        icon: "/portfolio/images/icon/trillium-icon.svg",
         role: "Infographiste, HAC Football",
         location: "Le Havre, France",
         startYear: "2019",
