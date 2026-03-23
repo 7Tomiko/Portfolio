@@ -10,7 +10,7 @@ const Veille = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('/api/featured-work')
+                const res = await fetch('/portfolio/api/featured-work')
                 if (!res.ok) throw new Error('Failed to fetch')
                 const data = await res.json()
                 setFeatureWork(data?.featureWork)
