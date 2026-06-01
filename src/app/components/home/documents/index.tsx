@@ -59,6 +59,12 @@ const Documents = () => {
             Rapport de stage 1ère année
           </button>
           <button 
+            onClick={() => openDoc("/portfolio/AttestationStage1.pdf", "Attestation de stage 1ère année")}
+            className="px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary/5 transition font-medium flex items-center gap-2"
+          >
+            Attestation de stage 1ère année
+          </button>
+          <button 
             onClick={() => openDoc("/portfolio/rapport-stage-2.pdf", "Rapport de Stage - 2ème Année")}
             className="px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary/5 transition font-medium flex items-center gap-2"
           >
@@ -75,6 +81,12 @@ const Documents = () => {
             className="px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary/5 transition font-medium flex items-center gap-2"
           >
             Certification PIX
+          </button>
+          <button 
+            onClick={() => openDoc("/portfolio/GrilleSynth.pdf", "Synthèse des compétences")}
+            className="px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary/5 transition font-medium flex items-center gap-2"
+          >
+            Synthèse des compétences
           </button>
         </div>
       </div>

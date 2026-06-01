@@ -1,147 +1,110 @@
 "use client";
 
-import Link from "next/link";
-
 const articlesVR = [
   { 
     id: 1, 
-    titre: "FDA : Autorisation du premier système VR pour les douleurs chroniques", 
-    date: "Octobre 2025", 
-    resume: "La FDA américaine a validé l'EaseVRx comme dispositif médical de classe II. C'est une étape historique pour la prescription de thérapies immersives.", 
-    lien: "https://www.fda.gov/news-events/press-announcements/fda-authorizes-marketing-virtual-reality-system-chronic-pain-reduction" 
+    titre: "Impact de la VR sur la gestion de la douleur : Outil transformateur", 
+    date: "Novembre 2025", 
+    resume: "Analyse clinique des effets analgésiques de la réalité virtuelle, démontrant qu'elle module les réseaux sensoriels et émotionnels lors des soins intensifs et des brûlures graves.", 
+    lien: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12401454/" 
   },
   { 
     id: 2, 
-    titre: "Nature : La VR pour restaurer la vision binoculaire", 
+    titre: "Efficacité de la réalité augmentée et mixte dans l'éducation médicale", 
     date: "Novembre 2025", 
-    resume: "Une étude publiée dans Nature montre comment la VR peut rééduquer l'amblyopie chez l'adulte, un trouble auparavant jugé irréversible après l'enfance.", 
-    lien: "https://www.nature.com/articles/s41598-021-97213-w" 
+    resume: "Une méta-analyse prouvant que les simulateurs XR réduisent significativement les taux d'échec et accélèrent le temps d'exécution lors de l'apprentissage des gestes médicaux complexes.", 
+    lien: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12613513/" 
   },
   { 
     id: 3, 
-    titre: "L'Usine Digitale : La formation chirurgicale via Osso VR", 
-    date: "Décembre 2025", 
-    resume: "Analyse de la montée en puissance des simulateurs chirurgicaux permettant de réduire les erreurs de 38% lors des premières interventions réelles.", 
-    lien: "https://www.usine-digitale.fr/article/osso-vr-la-plateforme-de-simulation-chirurgicale-en-realite-virtuelle-leve-27-millions-de-dollars.N1086202" 
+    titre: "La réalité virtuelle immersive par visiocasque en chirurgie", 
+    date: "Novembre 2025", 
+    resume: "Une revue systématique confirmant la supériorité de la VR pour la rétention des connaissances à long terme dans l'apprentissage de l'anatomie et de la chirurgie.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41233820/" 
   },
   { 
     id: 4, 
-    titre: "ScienceDaily : Réduction de l'anxiété pré-opératoire", 
-    date: "Janvier 2026", 
-    resume: "Une étude universitaire prouve que l'immersion VR calme les patients avant une anesthésie mieux que les benzodiazépines classiques.", 
-    lien: "https://www.sciencedaily.com/releases/2019/10/191021075908.htm" 
+    titre: "Améliorer la confiance des étudiants via la simulation chirurgicale", 
+    date: "Décembre 2025", 
+    resume: "Étude transversale utilisant le système 'Precision OS' pour former de jeunes étudiants en médecine à la chirurgie orthopédique (comme la pose de clous intramédullaires) sans risque pour le patient.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41317507/" 
   },
   { 
     id: 5, 
-    titre: "JMIR : La VR pour le traitement du stress post-traumatique", 
-    date: "Février 2026", 
-    resume: "Le Journal of Medical Internet Research détaille les protocoles d'exposition virtuelle pour les vétérans et victimes d'accidents.", 
-    lien: "https://www.jmir.org/2021/6/e24541/" 
+    titre: "Formation en communication infirmière et médicale via la VR", 
+    date: "Janvier 2026", 
+    resume: "Une étude européenne multi-pays validant l'utilisation de scénarios virtuels difficiles pour améliorer l'intelligence émotionnelle et l'annonce de diagnostics aux patients.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41547319/" 
   },
   { 
     id: 6, 
-    titre: "The Lancet Digital Health : VR et soins palliatifs", 
-    date: "Mars 2026", 
-    resume: "L'utilisation de la VR pour améliorer la qualité de vie des patients en fin de vie en leur permettant des 'voyages' virtuels relaxants.", 
-    lien: "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30187-5/fulltext" 
+    titre: "Impact de la simulation 3D et VR sur la prise de décision chirurgicale", 
+    date: "Janvier 2026", 
+    resume: "Évaluation de l'influence de la réalité virtuelle sur les attentes, le niveau de stress et la satisfaction postopératoire des patientes en chirurgie esthétique et réparatrice.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41518093/" 
   },
   { 
     id: 7, 
-    titre: "CNET : L'Apple Vision Pro entre dans les hôpitaux", 
-    date: "Avril 2026", 
-    resume: "Comment la haute résolution du casque d'Apple est utilisée pour l'imagerie médicale 3D en temps réel pendant les opérations.", 
-    lien: "https://www.cnet.com/health/doctors-are-using-apple-vision-pro-to-perform-surgery/" 
+    titre: "Effet de la réalité virtuelle sur les résultats postopératoires chez l'enfant", 
+    date: "Février 2026", 
+    resume: "Une revue systématique confirmant l'efficacité de la VR comme outil non pharmacologique pour réduire la détresse, les pleurs et la douleur postopératoire en pédiatrie.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41758097/" 
   },
   { 
     id: 8, 
-    titre: "PubMed : Efficacité de la VR en rééducation post-AVC", 
-    date: "Mai 2026", 
-    resume: "Méta-analyse des résultats cliniques sur 500 patients : la VR stimule la neuroplasticité plus rapidement que la kinésithérapie traditionnelle.", 
-    lien: "https://pubmed.ncbi.nlm.nih.gov/30415302/" 
+    titre: "Éducation à la traumatologie maxillo-faciale face aux techniques classiques", 
+    date: "Février 2026", 
+    resume: "Essai clinique démontrant que la VR aide les étudiants à identifier des lésions osseuses craniennes qui ne sont pas perceptibles avec les visualisations médicales 3D classiques.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41759581/" 
   },
   { 
     id: 9, 
-    titre: "Frontiers : La VR pour les soins dentaires", 
-    date: "Octobre 2025", 
-    resume: "Étude sur la distraction par la VR pour réduire la douleur perçue et l'anxiété lors des extractions dentaires chez les enfants.", 
-    lien: "https://www.frontiersin.org/articles/10.3389/fpubh.2023.1189495/full" 
+    titre: "Expériences des étudiants avec la simulation clinique VR", 
+    date: "Février 2026", 
+    resume: "Analyse qualitative au Royaume-Uni soulignant l'immersion accrue apportée par la VR tout en étudiant comment les soignants gèrent la surcharge cognitive en environnement virtuel.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41672483/" 
   },
   { 
     id: 10, 
-    titre: "MIT Tech Review : Le retour haptique en médecine", 
-    date: "Novembre 2025", 
-    resume: "Les nouveaux gants VR permettent désormais aux étudiants de 'sentir' la résistance des organes virtuels lors des dissections numériques.", 
-    lien: "https://www.technologyreview.com/2021/04/16/1022880/haptic-feedback-vr-surgery/" 
+    titre: "L'évolution numérique de la planification chirurgicale (Technologies immersives)", 
+    date: "Février 2026", 
+    resume: "Analyse de 30 études montrant que la VR permet aux chirurgiens de modifier et sécuriser leurs plans préopératoires dans 32 % à 52 % des cas graves (ex: chirurgies thoraciques).", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41835258/" 
   },
   { 
     id: 11, 
-    titre: "Inserm : Réparer les membres fantômes par l'image", 
-    date: "Décembre 2025", 
-    resume: "L'Institut de recherche français explique comment le cerveau est 'trompé' par la VR pour supprimer les douleurs après une amputation.", 
-    lien: "https://presse.inserm.fr/la-realite-virtuelle-au-service-de-la-sante-mentale/35766/" 
+    titre: "La VR comme outil d'amélioration des compétences cliniques et relationnelles", 
+    date: "Mars 2026", 
+    resume: "Revue bibliographique démontrant comment la VR permet aux étudiants d'avoir une pratique sûre, répétitive et avec des retours objectifs (tracking) pour perfectionner leurs gestes.", 
+    lien: "https://www.mdpi.com/2504-3900/137/1/128" 
   },
   { 
     id: 12, 
-    titre: "VentureBeat : AppliedVR lève 36M$ pour ses thérapies", 
-    date: "Janvier 2026", 
-    resume: "Le secteur de la santé numérique attire les investisseurs avec l'expansion des cliniques virtuelles à domicile.", 
-    lien: "https://venturebeat.com/business/appliedvr-raises-36m-to-bring-virtual-reality-therapeutics-into-the-home/" 
+    titre: "Haute satisfaction de la formation VR en reconstruction ligamentaire", 
+    date: "Mars 2026", 
+    resume: "Étude pilote sur l'utilisation du casque de réalité virtuelle pour simuler les opérations du ligament croisé antérieur chez les jeunes internes en orthopédie.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/41791594/" 
   },
   { 
     id: 13, 
-    titre: "Stanford Medicine : VR pour l'empathie médicale", 
-    date: "Février 2026", 
-    resume: "Un programme permettant aux médecins de vivre l'expérience d'un patient atteint de la maladie d'Alzheimer via un casque VR.", 
-    lien: "https://medicine.stanford.edu/news/current-news/standard-news/vr-empathy.html" 
+    titre: "La réalité virtuelle pour renforcer les compétences en génomique en Afrique", 
+    date: "Mai 2026", 
+    resume: "Un article détaillant comment la VR permet de compenser le manque de matériel physique (laboratoires sous-équipés) pour former les biologistes aux manipulations PCR.", 
+    lien: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12887066/" 
   },
   { 
     id: 14, 
-    titre: "BBC News : VR helping children through chemo", 
-    date: "Mars 2026", 
-    resume: "Des hôpitaux britanniques utilisent des mondes sous-marins virtuels pour réduire le stress des enfants pendant les chimiothérapies.", 
-    lien: "https://www.bbc.com/news/av/uk-england-leeds-48665977" 
+    titre: "Améliorer les pratiques de soins palliatifs grâce à un programme VR", 
+    date: "Mai 2026", 
+    resume: "Preuves scientifiques que l'immersion VR améliore significativement les connaissances, l'empathie et les attitudes des professionnels accompagnant les patients en fin de vie.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/42097867/" 
   },
   { 
     id: 15, 
-    titre: "MDPI : Télémédecine immersive en zone rurale", 
-    date: "Avril 2026", 
-    resume: "Rapport sur l'utilisation de la VR pour permettre des diagnostics spécialisés à distance dans les déserts médicaux.", 
-    lien: "https://www.mdpi.com/2077-0383/10/19/4481" 
-  },
-  { 
-    id: 16, 
-    titre: "TechCrunch : Meta s'attaque à la formation médicale", 
+    titre: "L'impact perçu de la Réalité Virtuelle et Augmentée sur la formation", 
     date: "Mai 2026", 
-    resume: "Meta lance de nouveaux outils d'apprentissage professionnel dédiés aux universités de médecine pour le Quest 3.", 
-    lien: "https://techcrunch.com/2024/04/15/meta-is-bringing-education-focused-vr-software-to-the-quest/" 
-  },
-  { 
-    id: 17, 
-    titre: "Scientific American : How VR is Training Doctors", 
-    date: "Novembre 2025", 
-    resume: "Pourquoi la répétition en environnement virtuel sécurisé sauve des vies dans les situations de triage aux urgences.", 
-    lien: "https://www.scientificamerican.com/article/how-virtual-reality-is-training-doctors-to-save-lives/" 
-  },
-  { 
-    id: 18, 
-    titre: "Healthline : Virtual Reality for Physical Therapy", 
-    date: "Décembre 2025", 
-    resume: "Comparatif des meilleures applications de fitness VR détournées pour la rééducation physique douce à domicile.", 
-    lien: "https://www.healthline.com/health/virtual-reality-physical-therapy" 
-  },
-  { 
-    id: 19, 
-    titre: "Forbes : The Future Of Surgery Is Virtual", 
-    date: "Mars 2026", 
-    resume: "Analyse du marché de la MedTech : comment la VR va devenir la norme standard d'accréditation pour les chirurgiens.", 
-    lien: "https://www.forbes.com/sites/forbestechcouncil/2022/02/24/the-future-of-surgery-is-virtual/" 
-  },
-  { 
-    id: 20, 
-    titre: "IEEE Spectrum : Robots chirurgicaux et VR", 
-    date: "Mai 2026", 
-    resume: "L'intégration des flux vidéo VR dans les consoles de pilotage des robots Da Vinci pour une meilleure précision visuelle.", 
-    lien: "https://spectrum.ieee.org/vr-surgery-robots" 
+    resume: "Application de la théorie de Kolb prouvant que l'environnement immersif (XR) aide les futurs chirurgiens à bâtir une confiance opératoire solide avant de toucher leur premier patient.", 
+    lien: "https://pubmed.ncbi.nlm.nih.gov/42084191/" 
   }
 ];
 
@@ -151,7 +114,7 @@ const Veille = () => {
             <div className="container mx-auto px-4">
                 <div className="border-x border-primary/10">
                     <div className="flex flex-col max-w-3xl mx-auto py-10 text-center">
-                        <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Veille Technologique - Oct 2025 à Mai 2026</p>
+                        <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Veille Technologique - Oct 2025 à Juin 2026</p>
                         <h2 className="text-3xl font-bold mt-2">Réalité Virtuelle au service de la Médecine</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 border-t border-primary/10">
@@ -168,7 +131,7 @@ const Veille = () => {
                                     rel="noopener noreferrer"
                                     className="text-sm font-semibold text-blue-600 underline mt-5 inline-block hover:text-primary transition-colors"
                                 >
-                                    Lire l'article source (Anglais/Français)
+                                    Lire l'étude clinique
                                 </a>
                             </div>
                         ))}
