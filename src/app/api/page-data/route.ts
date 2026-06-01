@@ -17,8 +17,8 @@ const experienceData = [
         icon: "/portfolio/images/icon/tailwind-icon.svg",
         role: "Développeur Web, Coeur à Pattes",
         location: "Le Havre, France",
-        startYear: "2025",
-        endYear: "2025",
+        startYear: "12 mai 2025",
+        endYear: "13 juin 2025",
         bulletPoints: [
             "Être à l'écoute des besoins des clients et proposer des solutions adaptées pour améliorer leur présence en ligne",
             "Renforcer les compétences en développement web déjà aquises et apprendre de nouvelles technologies",
@@ -66,7 +66,7 @@ const parcoursData = [
 const projectOverview = {
     caseStudies: [
         { name: "TomiCar - Application de gestion de trajets", url: "#" },
-        { name: "MoulinetteTAP - Outil de traitement automatisé", url: "#" },
+        { name: "Coeur à Pattes - Site Web de l'association", url: "https://coeurapattes.com" },
     ],
     sideProjects: [
         { name: "HaerinBOT (Bot Discord)", comingSoon: true },
