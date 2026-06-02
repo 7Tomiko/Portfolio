@@ -71,6 +71,12 @@ const Documents = () => {
             Rapport de stage 2ème année
           </button>
           <button 
+            onClick={() => openDoc("/portfolio/AttestationStage2.pdf", "Attestation de stage 2ème année")}
+            className="px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary/5 transition font-medium flex items-center gap-2"
+          >
+            Attestation de stage 2ème année
+          </button>
+          <button 
             onClick={() => openDoc("/portfolio/anssi.pdf", "Certification ANSSI")}
             className="px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary/5 transition font-medium flex items-center gap-2"
           >
