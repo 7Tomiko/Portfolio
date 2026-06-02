@@ -88,6 +88,12 @@ const Documents = () => {
           >
             Synthèse des compétences
           </button>
+          <button 
+            onClick={() => openDoc("/portfolio/SchemaLux.pdf", "Schéma de l'application Stage 2")}
+            className="px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary/5 transition font-medium flex items-center gap-2"
+          >
+            Schéma de l'application Stage 2
+          </button>
         </div>
       </div>
 
